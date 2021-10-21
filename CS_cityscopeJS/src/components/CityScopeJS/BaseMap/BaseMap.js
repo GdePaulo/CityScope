@@ -167,18 +167,18 @@ class Map extends Component {
      */
     _setViewStateToTableHeader() {
         const header = this.props.cityioData.GEOGRID.properties.header;
-
         this.setState({
             viewState: {
-                ...this.state.viewState,
-                longitude: header.longitude,
-                latitude: header.latitude,
-                zoom: 15,
+                ...this.state.viewState,  
+                longitude: (4.45313 + 4.52568)/2,  //header.longitude, //this is where the lon lat and zoom are to be fixed
+                latitude:  (51.89948 + 51.92680)/2,//header.latitude,
+                zoom: 14,
                 pitch: 0,
-                bearing: 360 - header.rotation,
+                bearing: 0,//360 - header.rotation,
                 orthographic: true,
             },
         });
+
     }
 
     _setupSunEffects() {
