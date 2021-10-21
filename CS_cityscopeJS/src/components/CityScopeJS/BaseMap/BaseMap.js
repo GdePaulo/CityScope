@@ -20,6 +20,9 @@ import { LightingEffect, AmbientLight, _SunLight } from "@deck.gl/core";
 import settings from "../../../settings/settings.json";
 // import test_trip_data from "./test_trip_data.json";
 import { _hexToRgb } from "../../GridEditor/EditorMap/EditorMap";
+// below line added for fake ABM data
+import cityioFakeData from "../../../settings/fake_ABM.json";
+
 
 class Map extends Component {
     constructor(props) {
@@ -364,12 +367,12 @@ class Map extends Component {
                 new TripsLayer({
                     id: "ABM",
                     visible: menu.includes("ABM") ? true : false,
-                    data: cityioData.ABM2.trips,
+                    data: cityioFakeData.trips,
                     getPath: (d) => d.path,
                     getTimestamps: (d) => d.timestamps,
                     getColor: (d) => {
                         let col = _hexToRgb(
-                            cityioData.ABM2.attr[ABMmode][d[ABMmode]].color
+                            cityioFakeData.attr[ABMmode][d[ABMmode]].color
                         );
                         return col;
                     },
@@ -397,7 +400,7 @@ class Map extends Component {
                     id: "AGGREGATED_TRIPS",
                     visible: menu.includes("AGGREGATED_TRIPS") ? true : false,
                     _shadow: false,
-                    data: cityioData.ABM2.trips,
+                    data: cityioFakeData.trips,
                     getPath: (d) => {
                         const noisePath =
                             Math.random() < 0.5
@@ -412,7 +415,7 @@ class Map extends Component {
                     },
                     getColor: (d) => {
                         let col = _hexToRgb(
-                            cityioData.ABM2.attr[ABMmode][d[ABMmode]].color
+                            cityioFakeData.attr[ABMmode][d[ABMmode]].color
                         );
                         return col;
                     },
@@ -493,7 +496,8 @@ class Map extends Component {
         }
 
 
-        if (menu.includes("Bounds")) {
+        if (menu.includes("Bounds")) { 
+                // console.log(trips.attr.mode)
                 layers.push(
                     new SolidPolygonLayer({
                         // data: "E:/TU_Delft/job_hunt/YES_Delft/CityScope/datasets/layers/shp/cityScope_rotterdam_aoi_4326.geojson" ,

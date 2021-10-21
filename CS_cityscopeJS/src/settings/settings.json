@@ -35,37 +35,23 @@
             "ABM": {
                 "displayName": "Mobility Simulation",
                 "showOnInit": false,
-                "requireModule": "ABM2"
+                "requireModule": false
             },
             "AGGREGATED_TRIPS": {
                 "displayName": "Aggregated Trips",
                 "showOnInit": false,
-                "requireModule": "ABM2"
+                "requireModule": false
             },
             "Bounds":{
                 "displayName": "Display Extent Table projection adjustment",
-                "showOnInit": false,
+                "showOnInit": true,
                 "requireModule": false},
             "ACCESS": {
                 "displayName": "Accessibility Analysis",
                 "showOnInit": false,
                 "requireModule": "access"
             },
-            "RADAR": {
-                "displayName": "Urban Indicators",
-                "showOnInit": false,
-                "requireModule": "indicators"
-            },
-            "ROTATE": {
-                "displayName": "Rotate Camera",
-                "showOnInit": false,
-                "requireModule": false
-            },
-            "SHADOWS": {
-                "displayName": "Toggle Shadows",
-                "showOnInit": true,
-                "requireModule": "GEOGRID"
-            },
+
             "KEYSTONE": {
                 "displayName": "Projection Mapping",
                 "showOnInit": false,
@@ -76,8 +62,8 @@
 
     "map": {
         "mapStyle": {
-            "sat": "mapbox://styles/pratyushkumar/cksftmzco69lk17rzxvl0hl3f?fresh=true",
-            "dark": "mapbox://styles/pratyushkumar/cksftmzco69lk17rzxvl0hl3f?fresh=true",
+            "sat":  "mapbox://styles/pratyushkumar/cksnq41aa0t1r17o6f4hzis3d?fresh=true",
+            "dark": "mapbox://styles/pratyushkumar/cksnq41aa0t1r17o6f4hzis3d?fresh=true",
             "blue": "mapbox://styles/pratyushkumar/cksnq41aa0t1r17o6f4hzis3d?fresh=true"
         },
         "layers": {
