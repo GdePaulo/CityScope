@@ -44,14 +44,18 @@
             },
             "Bounds":{
                 "displayName": "Display Extent Table projection adjustment",
-                "showOnInit": true,
+                "showOnInit": false,
                 "requireModule": false},
             "ACCESS": {
                 "displayName": "Accessibility Analysis",
                 "showOnInit": false,
                 "requireModule": "access"
             },
-
+            "ROTATE": {
+                "displayName": "Rotate Camera",
+                "showOnInit": false,
+                "requireModule": false
+            },
             "KEYSTONE": {
                 "displayName": "Projection Mapping",
                 "showOnInit": false,
