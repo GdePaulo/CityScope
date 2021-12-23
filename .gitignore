@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# env file with mapbox code
+CS_cityscopeJS/.env
